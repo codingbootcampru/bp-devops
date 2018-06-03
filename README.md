@@ -2,17 +2,17 @@
 
 ## Swarm Commands
 
-`docker swarm init --advertise-addr 139.162.249.218`
-`docker swarm join-token manager`
-`docker swarm leave --force`
-`docker node ls`
+* docker swarm init --advertise-addr 139.162.249.218
+* docker swarm join-token manager
+* docker swarm leave --force
+* docker node ls
 
 ## Stack Commands
 
-`docker stack deploy -c docker-compose.yml mystack --with-registry-auth`
-`docker service ls`
-`docker service ps mystack_web`
-`docker stack rm mystack`
+* docker stack deploy -c docker-compose.yml mystack --with-registry-auth
+* docker service ls
+* docker service ps mystack_web
+* docker stack rm mystack
 
 ## View Container Logs
 
