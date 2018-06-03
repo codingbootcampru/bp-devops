@@ -9,7 +9,7 @@ services:
       - "MONGODB_PASS=rootpass"
       - "MONGODB_NAME=admin"
     deploy:
-      replicas: 5
+      replicas: 3
       restart_policy:
         condition: on-failure
       resources:
