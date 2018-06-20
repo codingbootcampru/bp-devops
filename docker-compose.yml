@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: klishevich/bp-hapi-react-redux:1.0.6
+    image: klishevich/bp-hapi-react-redux:1.0.7
     environment:
       - "APP_MOCKS=1"
       - "MONGODB_HOST=mongo"
