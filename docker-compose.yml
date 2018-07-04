@@ -37,7 +37,7 @@ services:
       - "MONGO_INITDB_ROOT_USERNAME=root"
       - "MONGO_INITDB_ROOT_PASSWORD=rootpass"
     volumes:
-      - "/home/mike/data/mongo:/data/db"
+      - "/Users/mike/data/mongo:/data/db"
     deploy:
       restart_policy:
         condition: on-failure
