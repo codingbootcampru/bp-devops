@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: klishevich/bp-hapi-react-redux:1.0.8
+    image: klishevich/bp-hapi-react-redux:1.0.9
     environment:
       - "APP_MOCKS=1"
       - "MONGODB_HOST=mongo"
@@ -43,6 +43,26 @@ services:
         condition: on-failure
       placement:
         constraints: [node.role == manager]
+    networks:
+      - webnet
+  authotp:
+    image: klishevich/bp-auth-otp-api:1.0.0
+    environment:
+      - "APP_MOCKS=1"
+      - "MONGODB_HOST=mongo"
+      - "MONGODB_USER=root"
+      - "MONGODB_PASS=rootpass"
+      - "MONGODB_NAME=admin"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+    ports:
+      - "3000:3000"
     networks:
       - webnet
 networks:
