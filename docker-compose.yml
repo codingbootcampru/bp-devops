@@ -82,11 +82,6 @@ services:
       - "node.name=elastic-prod-main-node"
       - "bootstrap.memory_lock=true"
       - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
-    ulimits:
-      nproc: 262144
-      nofile:
-        soft: 262144
-        hard: 262144
     deploy:
       replicas: 1
       restart_policy:
@@ -95,8 +90,8 @@ services:
         constraints: [node.role == manager]
       resources:
         limits:
-          cpus: "0.5"
-          memory: 500M
+          cpus: "0.3"
+          memory: 300M
     volumes:
       - "/home/mike/data/esdata1:/usr/share/elasticsearch/data"
     ports:
