@@ -90,12 +90,8 @@ services:
         constraints: [node.role == manager]
       resources:
         limits:
-          cpus: "0.3"
-          memory: 300M
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
+          cpus: "0.5"
+          memory: 500M
     volumes:
       - "/home/mike/data/esdata1:/usr/share/elasticsearch/data"
     ports:
