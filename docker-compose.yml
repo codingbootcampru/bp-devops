@@ -82,6 +82,8 @@ services:
       - "node.name=elastic-prod-main-node"
       - "bootstrap.memory_lock=true"
       - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+    ulimits:
+      nproc: 262144
     deploy:
       replicas: 1
       restart_policy:
