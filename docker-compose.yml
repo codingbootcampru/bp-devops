@@ -42,7 +42,7 @@ services:
       - "MONGO_INITDB_ROOT_USERNAME=root"
       - "MONGO_INITDB_ROOT_PASSWORD=rootpass"
     volumes:
-      - "/home/mike/data/mongo:/data/db"
+      - "/Users/mike/data/mongo:/data/db"
     deploy:
       restart_policy:
         condition: on-failure
@@ -93,7 +93,7 @@ services:
           cpus: "0.5"
           memory: 500M
     volumes:
-      - "/home/mike/data/esdata1:/usr/share/elasticsearch/data"
+      - "/Users/mike/data/esdata1:/usr/share/elasticsearch/data"
     ports:
       - "9200:9200"
     networks:
