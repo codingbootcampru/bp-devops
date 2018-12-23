@@ -3,7 +3,7 @@ services:
   web:
     image: klishevich/bp-hapi-react-redux:1.1.0
     environment:
-      - "APP_MOCKS=1"
+      - "APP_MOCKS=0"
       - "MONGODB_HOST=mongo"
       - "MONGODB_USER=root"
       - "MONGODB_PASS=rootpass"
